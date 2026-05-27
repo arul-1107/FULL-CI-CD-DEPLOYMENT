@@ -52,8 +52,8 @@ pipeline {
                 bat 'docker stop frontend || exit 0'
                 bat 'docker rm frontend || exit 0'
 
-                bat 'docker run -d --name backend -p 8080:8080 %BACKEND_IMAGE%'
-                bat 'docker run -d --name frontend -p 80:80 %FRONTEND_IMAGE%'
+                bat 'docker run -d --name backend -p 8090:8080 %BACKEND_IMAGE%'
+                bat 'docker run -d --name frontend -p 90:80 %FRONTEND_IMAGE%'
             }
         }
     }

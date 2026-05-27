@@ -17,7 +17,7 @@ pipeline {
 
         stage('Build Backend (Maven)') {
             steps {
-                dir('metallic-bacckend') {
+                dir('metallic-backend') {
                     bat 'mvn clean package -DskipTests'
                 }
             }

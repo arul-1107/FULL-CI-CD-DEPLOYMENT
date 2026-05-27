@@ -26,7 +26,8 @@ pipeline {
         stage('Build Frontend (NPM)') {
             steps {
                 dir('metallic-frontend') {
-                     bat 'mvn clean package -DskipTests'
+                      bat 'docker build -t metallic-frontend .'
+
                 }
             }
         }

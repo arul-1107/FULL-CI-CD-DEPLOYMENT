@@ -26,8 +26,7 @@ pipeline {
         stage('Build Frontend (NPM)') {
             steps {
                 dir('metallic-frontend') {
-                    bat 'npm install'
-                    bat 'npm run build'
+                     bat 'mvn clean package -DskipTests'
                 }
             }
         }
